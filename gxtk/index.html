@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--初始化页面并设置禁用右键属性-->
+<html lang="zh" onselectstart="return false" oncontextmenu=self.event.returnValue=false>
+
+
+	<!--head模块-->
+
+	<head>
+		<!--字符编码-->
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<!--语言-->
+		<meta http-equiv="Content-Language" contect="zh">
+		<!--移动端适配-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--窗口设定-->
+		<meta http-equiv="Window-target" content="_top">
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true">
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!--百度禁止转码-->
+		<meta http-equiv="Cache-Control" content="no-siteapp">
+		<!--浏览器的兼容配置-->
+		<!--Microsoft Internet Explorer-->
+		<!--是否开启cleartype显示效果-->
+		<meta http-equiv="cleartype" content="on">
+		<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+		<!--Pinned Site-->
+		<!-- IE 10 / Windows 8 -->
+		<meta name="msapplication-TileImage" content="pinned-tile-144.png">
+		<meta name="msapplication-TileColor" content="#009900">
+		<!--IE 11 / Windows 9.1-->
+		<meta name="msapplication-config" content="ieconfig.xml">
+		<!--Google Chrome-->
+		<!--禁止自动翻译-->
+		<meta name="google" value="notranslate">
+		<!--360浏览器-->
+		<!--极速模式-->
+		<meta name="renderer" content="webkit">
+		<!--QQ手机浏览器-->
+		<!--锁定屏幕在特定方向-->
+		<meta name="x5-orientation" content="portrait">
+		<!-- 全屏显示 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- 应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<!--UC浏览器-->
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- 禁止自动探测手机/邮箱号码 -->
+		<meta name="format-detection" content="telphone=no, email=no">
+		<!-- Add to Home Screen添加到主屏 -->
+		<!-- 是否启用 WebApp 全屏模式 -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- 设置状态栏的背景颜色,只有在 “apple-mobile-web-app-capable” content=”yes” 时生效 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- 添加到主屏后的标题 -->
+		<meta name="apple-mobile-web-app-title" content="tINAPO">
+		<!--Google Android-->
+		<meta name="theme-color" content="#CCFFFF">
+		<!-- 添加到主屏 -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<!--引入核心css-->
+		<link rel="stylesheet" href="./heheda/css/main.css" type="text/css">
+		<!--当动态内容被禁止时引入的css-->
+		<noscript>
+			<link rel="stylesheet" href="./heheda/css/noscript.css" type="text/css">
+		</noscript>
+		<!--PWA配置-->
+		<link rel='manifest' href='./manifest.json'>
+		<!--引入核心js-->
+		<script src="./heheda/js/jquery-3.6.0.min.js"></script>
+		<!--跨域内容预解析-->
+		<link rel="preconnect" href="https://pv.souhu.com/" crossorigin>
+		<link rel="preconnect" href="https://cartoon.heheda.top/" crossorigin>
+		<link rel="preconnect" href="https://tva1.sinaimg.cn/" crossorigin>
+		<link rel="preconnect" href="https://blog.heheda.top/" crossorigin>
+		<link rel="preconnect" href="https://q2.qlogo.cn/" crossorigin>
+		<link rel="dns-prefetch" href="https://pv.souhu.com/">
+		<link rel="dns-prefetch" href="https://cartoon.heheda.top/">
+		<link rel="dns-prefetch" href="https://tva1.sinaimg.cn/">
+		<link rel="dns-prefetch" href="https://blog.heheda.top/">
+		<link rel="dns-prefetch" href="https://q2.qlogo.cn/">
+		<!--SEO优化-->
+		<!--标题-->
+		<title>哼，没了啦</title>
+		<!--关键词-->
+		<meta name="keywords" content="个人主页,引导页,导航,博客,音乐,电影,壁纸,解析,源码,教程">
+		<!--描述-->
+		<meta name="description"
+			content="Tinapo小网">
+		<!--作者 author-->
+		<meta name="author" content="Tinapo小网">
+		<!--搜索引擎索引方式-->
+		<meta name="robots" content="all">
+		<!--logo-->
+		<link rel="shortcuticon" href="./favicon.ico">
+		<!---资源预加载配置(css)-->
+		<link rel="preload" as="style" href="./heheda/css/font-awesome.min.css">
+		<link rel="preload" as="style" href="./heheda/css/font.css">
+		<!---资源预加载配置(js)-->
+		<link rel="preload" as="script" href="./heheda/js/jquery-3.6.0.min.js">
+		<link rel="preload" as="script" href="./heheda/js/su.js">
+		<!---资源预加载配置(图片)-->
+		<link rel="preload" as="image" href="./heheda/image/loader.gif" type="image/gif">
+		<link rel="preload" as="image" href="./heheda/image/001.png" type="image/png">
+		<link rel="preload" as="image" href="./heheda/image/002.png" type="image/png">
+		<link rel="preload" as="image" href="./heheda/image/003.png" type="image/png">
+		<link rel="preload" as="image" href="./heheda/image/004.png" type="image/png">
+		<link rel="preload" as="image" href="./heheda/image/005.png" type="image/png">
+		<link rel="preload" as="image" href="./heheda/image/006.png" type="image/png">
+		<link rel="preload" as="image" href="./heheda/image/007.png" type="image/png">
+		<link rel="preload" as="image" href="./heheda/image/008.png" type="image/png">
+		<!---资源预加载配置(字体)-->
+		<link rel="preload" as="font" href="./heheda/font/woff2/7.woff2" type="font/woff2" crossorigin>
+	</head>
+	<!--body模块-->
+	<!-- 弹窗代码开始 -->
+<div class="web_notice" style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.3);z-index: 99999;">
+<div style="position: fixed;top: 50%;left: 50%;width: 550px;background: #FFF;transform: translate(-50%, -50%);border-radius: 40px;padding: 50px 40px;">
+<h3 style="font-weight: bold;text-align: center;font-size: 30px;
+">网站通知</h3><div style="font-size: 16px;margin-top: 26px;line-height: 30px;color: #999;
+">二狗资源网测试弹窗</div><a style="display: block;background: #98a3ff;color: #FFF;text-align: center;font-weight: bold;font-size: 19px;line-height: 60px;margin: 0 auto;margin-top: 45px;border-radius: 32px;width: 80%;" onclick="javascript:document.querySelector('.web_notice').remove()">我知道了</ a></div></div>
+<!-- 弹窗代码结束 -->
+	<body class="is-loading" title="久违久违，欢迎来到TINAPO工作室萌萌小网站Tinapo.cn！开始尽情探索吧！">
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Main -->
+			<section id="main">
+				<!--header模块-->
+				<header>
+					<!--头像-->
+					<span class="avatar"><img src="favicon.png"
+							alt="2585649532" title="这是我的头像" /></span>
+					<!--内容-->
+					<a href="https://space.bilibili.com/523474145?spm_id_from=333.337.0.0"
+						rel="noopener" target="_blank" title="欢迎关注我们的B站账号">
+						<h1>Tinapo小工作室官网</h1>
+					</a>
+					<!--一言-->
+					<p id="hitokoto" title="にじげん！"
+						style="color:#000000;text-shadow:1px 1px 1px #ffffff;font-weight: bold;margin-bottom: 10px;">:D
+						获取中...</p>
+				</header>
+				<!--footer模块-->
+				<footer>
+					<!--上部导航-->
+					<a href="/tk/mc/index.html" class="fuwuqigw" rel="noopener" target="_blank"
+						title="我们TINAPO我的世界服务器官网">Minecraft服务器</a>|
+				
+					<!--换行符占位，用于页面排版-->
+					<br \><br \>
+					<!--中部导航-->
+					<ul class="icons">
+						<li><a href="https://user.qzone.qq.com/2145074419" class="fa fa-globe" rel="noopener" target="_blank"
+								title="访问站主QQ空间">blog</a>博客
+						</li>
+						<li><a href="http://yankestudiotk.mysxl.cn/" class="fa fa-film" rel="noopener" target="_blank"
+								title="站主工作室官网">movie</a>电影</li>
+						<li><a href="https://ailogo.qq.com//" class="fa fa-music" rel="noopener" target="_blank"
+								title="免费生成AILOGO">music</a>音乐</li>
+						<li><a href="https://wall.alphacoders.com/by_collection.php?id=332" class="fa fa-picture-o" rel="noopener" target="_blank"
+								title="免费高清壁纸">picture</a>图片</li>
+						<li><a href="book" class="fa fa-book" rel="noopener" target="_blank" title="故障维护中">book</a>小说
+						</li>
+						<li><a href="https://tool.heheda.top/" class="fa fa-briefcase" rel="noopener" target="_blank"
+								title="HEHEDA工具箱">tool</a>工具</li>
+						
+						
+					</ul>
+					<!--联系方式-->
+					<a href="https://wpa.qq.com/msgrd?v=3&uin=2145074419&site=qq&menu=yes" class="fa fa-qq"
+						rel="noopener" target="_blank" title="QQ:2145074419">QQ</a>|
+					<a href="404.html" class="fa fa-weixin" rel="noopener" target="_blank"
+						title="微信:Yane_01">微信</a>|
+	
+					<a href="yankemczb@hotmail.com"
+						class="fa fa-envelope" rel="noopener" target="_blank" title="通过邮箱联系我">邮箱</a>
+				</footer>
+			</section>
+			<!-- Footer -->
+			<footer id="footer">
+				<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+				<ul class="copyright">
+					
+				<!--萌icp备案-->
+				<a href="https://icp.gov.moe/?keyword=20231207" target="_blank">萌ICP备20231207号</a>
+				<!--版权信息，请勿修改！-->
+				<h2 title="RCLOU/YANKESTUDIO版权所有"><a href="https://www.rclou.cn/" rel="noopener"
+						target="_blank">RCLOU</a>&nbsp;&copy;&nbsp;版权所有</h2>
+			</footer>
+			<div class="cd-top" onclick="call()" title="喜欢，就分享一下吧">分享</div>
+		</div>
+		<!--页面载入核心设置-->
+		<script>
+			if ('addEventListener' in window) {
+				window.addEventListener('load', function() {
+					document.body.className = document.body.className.replace(/\bis-loading\b/, '');
+				});
+				document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+			}
+		</script>
+		<!--落叶效果-->
+		<script src="./heheda/js/su.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$('body').wpSuperSnow({
+					flakes: ['./heheda/image/007.png', './heheda/image/006.png', './heheda/image/004.png',
+						'./heheda/image/005.png', './heheda/image/001.png', './heheda/image/003.png',
+						'./heheda/image/002.png', './heheda/image/008.png'
+					],
+					totalFlakes: '100',
+					zIndex: '999999999',
+					maxSize: '30',
+					maxDuration: '50',
+					useFlakeTrans: false
+				});
+			});
+		</script>
+		
+		<!--PWA渐进式应用配置-->
+		<script type="module">
+			import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+			const el = document.createElement('pwa-update');
+			document.body.appendChild(el);
+		</script>
+		<!--一言API-->
+		<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+		<!--网站标题自动判断-->
+		<script>
+			var title = document.title;
+
+			function istitle() {
+				var isHidden = document.hidden;	
+				if (isHidden) {
+					//当窗口不可见
+					document.title = '(つ ェ ?)我藏好了哦~';
+				} else {
+					//当窗口可见
+					document.title = '(*゜ロ゜)ノ被发现了~';
+					setTimeout("document.title=title", 3000);
+				}
+			};
+			document.addEventListener('visibilitychange', istitle);
+		</script>
+		<!--分享按钮-->
+		<script src="./heheda/js/NativeShare.js"></script>
+		<script>
+		        var nativeShare = new NativeShare()
+		        var shareData = {
+		            title: 'TINAPO小屋',
+		            desc: '据说是一个神奇且值得探索的地方！',
+		            // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
+		            link: 'https://my.heheda.top/',
+		            icon: './heheda/icon/128.png',
+		            // 不要过于依赖以下两个回调，很多浏览器是不支持的
+		            // success: function() {
+		            //     alert('success')
+		            // },
+		            // fail: function() {
+		            //     alert('fail')
+		            // }
+		        }
+		        nativeShare.setShareData(shareData)	
+		        function call(command) {
+		            try {
+		                nativeShare.call(command)
+		            } catch (err) {
+		                // 如果不支持，你可以在这里做降级处理
+		                // alert(err.message)
+						alert("分享失败，请手动分享！")
+		            }
+		        }
+		        function setTitle(title) {
+		            nativeShare.setShareData({
+		                title: title,
+		            })
+		        }
+		    </script>
+	</body>
+
+</html>
